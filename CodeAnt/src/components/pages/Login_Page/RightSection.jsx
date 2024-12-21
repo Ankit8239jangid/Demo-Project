@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Right_Auth_Page_Data } from "../../FIxd_Data/Fix.Data";
+import { Right_Auth_Page_Data } from "../../../Fixed_Data/Fix.Data";
 
 function RightSection() {
     const [isSAAS, setIsSAAS] = useState(true); // Default to SAAS

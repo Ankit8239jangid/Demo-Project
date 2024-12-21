@@ -1,5 +1,5 @@
-import LeftSection from "./LeftSection";
-import RightSection from "./RightSection";
+import LeftSection from "../Login_Page/LeftSection";
+import RightSection from "../Login_Page/RightSection";
 
 
 function LoginCard() {

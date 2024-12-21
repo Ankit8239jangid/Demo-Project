@@ -1,12 +1,15 @@
 import React from 'react'
-import LoginCard from './components/Login_Page/LoginCard'
+import Layout from './components/Layout/Layout'
+import LoginCard from "../src/components/pages/Login_Page/LoginCard"
 
 function App() {
   return (
    <>
-   <LoginCard/>
+   {/* <LoginCard/> */}
+  <Layout/>
    </>
   )
 }
 
 export default App
+

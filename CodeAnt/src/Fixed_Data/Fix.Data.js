@@ -1,19 +1,18 @@
+// .................... Improved Data for the Left_Auth_Page ....................//
+
 export const Left_Auth_Page_Data = {
     title: "AI to Detect & Autofix Bad Code",
-    numbers: [
-        "30+",
-        "10K+",
-        "100K+",
-        "500K+"
+    statistics: [
+        { label: "Language Support", value: "30+" },
+        { label: "Developers", value: "10K+" },
+        { label: "Hours Saved", value: "100K+" },
+        { label: "Issues Fixed", value: "500K+" },
     ],
-    labels: [
-        "Language Support",
-        "Developers",
-        "Hours Saved",
-        "Issues Fixed"
-    ],
-    issuesFixedChange: "+14% this week"
+    value: "500K+",
+
 };
+
+// .................... Improved Data for the Right_Auth_Page ....................//
 
 export const Right_Auth_Page_Data = {
     title: "Welcome to CodeAnt AI",
@@ -38,4 +37,9 @@ export const Right_Auth_Page_Data = {
         { id: 6, src: '/social_icons/SSO.png', alt: 'SSO' }
     ]
 };
+
+
+
+
+
 
