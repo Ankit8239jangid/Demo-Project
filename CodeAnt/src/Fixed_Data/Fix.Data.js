@@ -1,4 +1,4 @@
-// .................... Improved Data for the Left_Auth_Page ....................//
+// ....................Data for the Left_Auth_Page ....................//
 
 export const Left_Auth_Page_Data = {
     title: "AI to Detect & Autofix Bad Code",
@@ -12,7 +12,7 @@ export const Left_Auth_Page_Data = {
 
 };
 
-// .................... Improved Data for the Right_Auth_Page ....................//
+// ....................Data for the Right_Auth_Page ....................//
 
 export const Right_Auth_Page_Data = {
     title: "Welcome to CodeAnt AI",

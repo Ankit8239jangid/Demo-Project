@@ -42,7 +42,7 @@ function RightSection() {
                     {isSAAS
                         ? Right_Auth_Page_Data.imageData.map((item) => (
                             <NavLink
-                                to="/dashboard"
+                                to="/repositories"
                                 key={item.id}
                                 className="flex flex-row items-center justify-center gap-4 w-full md:w-1/4 lg:w-2/3 p-3 mt-4 mb- border border-gray-300 rounded-lg hover:bg-gray-100 transition duration-300"
                             >
@@ -52,7 +52,7 @@ function RightSection() {
                         ))
                         : Right_Auth_Page_Data.imageData2.map((item) => (
                             <NavLink
-                                to="/dashboard"
+                                to="/repositories"
                                 key={item.id}
                                 className="flex flex-row items-center justify-center gap-4 w-full md:w-3/4 lg:w-2/3 p-3 mt-4  border border-gray-300 rounded-lg hover:bg-gray-100 transition duration-300"
                             >

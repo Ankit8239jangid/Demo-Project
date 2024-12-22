@@ -32,13 +32,7 @@ export const AppProvider = ({ children }) => {
       size: "3096 KB",
       updated: " Updated 3 day ago",
     },
-    {
-      name: "mobile-app",
-      type: "Public",
-      language: "HTML/CSS",
-      size: "3096 KB",
-      updated: " Updated 6 day ago",
-    },
+ 
     {
       name: "mobile-app",
       type: "Public",

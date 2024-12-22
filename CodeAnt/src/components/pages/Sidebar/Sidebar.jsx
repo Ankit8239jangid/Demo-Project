@@ -6,6 +6,7 @@ import { FaBook } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoCallOutline } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Buttons = [
   { id: 11, name: "Repositories", icon: <FiHome /> },
@@ -58,30 +59,37 @@ const Sidebar = () => {
 
         {/* ................................................................... */}
 
-        <div className=" text-black mt-3">
+        <div className="text-black mt-3">
           {Buttons.map((button) => (
-            <button
+            <NavLink
+              to={'/repositories'}
               key={button.id}
-              className="flex items-center hover:bg-blue-500 hover:text-white  py-2 px-2 w-1/2 md:w-full rounded-xl gap-4 font-semibold cursor-pointer"
+              className={`flex items-center py-2 px-2 w-1/2 md:w-full rounded-xl gap-4 font-semibold cursor-pointer ${button.name === "Repositories" 
+                  ? "bg-blue-600 text-white"
+                  : ""
+                }`}
             >
               <span>{button.icon}</span>
               {button.name}
-            </button>
+            </NavLink>
           ))}
         </div>
+
+
+
 
 
         {/* ....................NaveBar bottom buttom..................................... */}
 
         <div className=" md:mt-40 mt-0 text-black  ">
-          <button className="flex items-center hover:bg-blue-500 hover:text-white  py-1 px-2 w-1/2 md:w-full   rounded-xl gap-4 font-semibold cursor-pointer" >
+          <NavLink to={''} className="flex items-center  py-1 px-2 w-1/2 md:w-full   rounded-xl gap-4 font-semibold cursor-pointer" >
             <IoCallOutline />
             Support
-          </button>
-          <button className="flex items-center hover:bg-red-600 hover:text-white  py-1 px-2 w-1/2 md:w-full  rounded-xl gap-4 font-semibold cursor-pointer" >
+          </NavLink>
+          <NavLink to={''} className="flex items-center hover:bg-red-600 hover:text-white  py-1 px-2 w-1/2 md:w-full  rounded-xl gap-4 font-semibold cursor-pointer" >
             <FiLogOut />
             Logout
-          </button>
+          </NavLink>
 
         </div>
 
