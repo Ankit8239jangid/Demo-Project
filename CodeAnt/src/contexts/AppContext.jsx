@@ -16,14 +16,28 @@ export const AppProvider = ({ children }) => {
       type: "Private",
       language: "JavaScript",
       size: "5871 KB",
-      updated: "Updated 2 days ago",
+      updated: "Updated 2 day ago",
     },
     {
       name: "analytics-dashboard",
       type: "Private",
       language: "Python",
       size: "4521 KB",
-      updated: "Updated 5 days ago",
+      updated: "Updated 5 day ago",
+    },
+    {
+      name: "mobile-app",
+      type: "Public",
+      language: "Swift",
+      size: "3096 KB",
+      updated: " Updated 3 day ago",
+    },
+    {
+      name: "mobile-app",
+      type: "Public",
+      language: "HTML/CSS",
+      size: "3096 KB",
+      updated: " Updated 6 day ago",
     },
     {
       name: "mobile-app",
@@ -46,13 +60,9 @@ export const AppProvider = ({ children }) => {
       size: "3096 KB",
       updated: " Updated 3 day ago",
     },
-    {
-      name: "mobile-app",
-      type: "Public",
-      language: "Swift",
-      size: "3096 KB",
-      updated: " Updated 3 day ago",
-    },
+    
+  
+  
    
   ]);
 
