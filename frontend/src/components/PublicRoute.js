@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function PublicRoute({children}) {
+function PublicRoute({ children }) {
   const navigate = useNavigate();
-  useEffect(()=>{
-   if(localStorage.getItem('token')){
-    navigate('/');
-   }
-  },[])
-  return (
-    <div>
-        {children}
-    </div>
-  )
+
+  useEffect(() => {
+    // Check if the user has a valid token in localStorage
+    const token = localStorage.getItem('token');
+    if (token) {
+      // If token is present, redirect to the home page
+      navigate('/');
+    }
+  }, [navigate]); // Adding navigate to dependencies in case of future re-renders
+
+  return <div>{children}</div>;
 }
 
-export default PublicRoute
+export default PublicRoute;

@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Question = require("./questionModel")
+const mongoose = require('mongoose');
+const Question = require("./questionModel");
 
 const examSchema = new mongoose.Schema({
     name: {
@@ -25,18 +25,20 @@ const examSchema = new mongoose.Schema({
     questions: {
         type: [mongoose.Schema.Types.ObjectId],
         required: true,
-        ref: "questions"  
+        ref: "questions"
     },
-},{
+}, {
     timestamps: true
-})
+});
 
-// remove all the questions associated with an exam if that exam is deleted
-examSchema.post('remove',async function(res, next){
-    await Question.deleteMany({exam: this._id});
+// Remove all the questions associated with an exam if that exam is deleted
+examSchema.post('findOneAndDelete', async function (doc, next) {
+    if (doc) {
+        await Question.deleteMany({ exam: doc._id });
+    }
     next();
-})
+});
 
-const examModel = mongoose.model("exams", examSchema)
+const examModel = mongoose.model("exams", examSchema);
 
-module.exports = examModel
+module.exports = examModel;

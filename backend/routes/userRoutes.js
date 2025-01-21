@@ -1,10 +1,14 @@
-const router = require("express").Router()
-const {register, login, getUserInfo} = require("../controllers/userControllers")
-const authMiddleware = require("../middlewares/authMiddleware")
+const router = require("express").Router();
+const { register, login, getUserInfo } = require("../controllers/userControllers");
+const authMiddleware = require("../middlewares/authMiddleware");
 
-router.post('/register',register)
-router.post('/login',login)
-router.post('/get-user-info',authMiddleware,getUserInfo)
+// User registration
+router.post('/register', register);
 
+// User login
+router.post('/login', login);
 
-module.exports = router
+// Get user info (GET method, as we're fetching data)
+router.get('/get-user-info', authMiddleware, getUserInfo);
+
+module.exports = router;

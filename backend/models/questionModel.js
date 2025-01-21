@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Exam = require("./examModel")
+const mongoose = require('mongoose');
+const Exam = require("./examModel");
 
 const questionSchema = new mongoose.Schema({
     name: {
@@ -19,17 +19,27 @@ const questionSchema = new mongoose.Schema({
         ref: "exams",
         required: true
     },
-},{
+}, {
     timestamps: true
-})
+});
 
-// remove question from the exam if the question is deleted
-questionSchema.post('remove',async function(res, next){
-    await Exam.updateOne({ _id: this.exam},{
-        $pull: {questions: this._id}
-    });
-    next();
-})
+// Remove question from the exam's questions array if the question is deleted
+questionSchema.post('remove', async function (doc, next) {
+    try {
+        // Ensure the associated exam exists before performing the update
+        const exam = await Exam.findById(doc.exam);
+        if (exam) {
+            await Exam.updateOne(
+                { _id: doc.exam },
+                { $pull: { questions: doc._id } }
+            );
+        }
+        next();
+    } catch (error) {
+        next(error); // Pass error to the next middleware
+    }
+});
 
-const questionModel = mongoose.model("questions",questionSchema)
+const questionModel = mongoose.model("questions", questionSchema);
+
 module.exports = questionModel;
