@@ -154,42 +154,6 @@ npm start
 
 ## Database Schema
 
-### User Schema
-```javascript
-{
-  username: String,
-  email: String,
-  password: String,
-  role: String,
-  examHistory: Array
-}
-```
-
-### Question Schema
-```javascript
-{
-  question: String,
-  options: {
-    A: String,
-    B: String,
-    C: String,
-    D: String
-  },
-  correctOption: String,
-  marks: Number
-}
-```
-
-### Exam Schema
-```javascript
-{
-  userId: ObjectId,
-  questions: Array,
-  answers: Object,
-  score: Number,
-  date: Date
-}
-```
 
 ## Contributing
 
@@ -256,6 +220,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Express.js Documentation
 - Tailwind CSS Documentation
 
-## Contact
-
-Project Link: [https://github.com/yourusername/mcq-exam-app](https://github.com/yourusername/mcq-exam-app)
