@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const Report = require("./reportModel");
+import mongoose from "mongoose";
+import Report from "./reportModel.js";
 
 const userSchema = new mongoose.Schema(
   {
@@ -38,4 +38,4 @@ userSchema.post("remove", async function (doc, next) {
 });
 
 const userModel = mongoose.model("users", userSchema);
-module.exports = userModel;
+export default userModel;

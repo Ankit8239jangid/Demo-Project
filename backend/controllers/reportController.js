@@ -1,9 +1,9 @@
-const Report = require("../models/reportModel");
-const Exam = require("../models/examModel");
-const User = require("../models/userModel");
+import Report from "../models/reportModel.js";
+import Exam from "../models/examModel.js";
+import User from "../models/userModel.js";
 
 // Add attempts
-const addReport = async (req, res) => {
+export const addReport = async (req, res) => {
   try {
     const report = new Report(req.body);
     await report.save();
@@ -22,7 +22,7 @@ const addReport = async (req, res) => {
 };
 
 // Get all attempts
-const getAllAttempts = async (req, res) => {
+export const getAllAttempts = async (req, res) => {
   try {
     const user_admin = await User.findOne({ _id: req.body.userid });
     if (!user_admin) {
@@ -83,7 +83,7 @@ const getAllAttempts = async (req, res) => {
 };
 
 // Get all attempts by a user
-const getAllAttemptsByUser = async (req, res) => {
+export const getAllAttemptsByUser = async (req, res) => {
   try {
     const reports = await Report.find({ user: req.body.userid })
       .populate("exam")
@@ -111,5 +111,3 @@ const getAllAttemptsByUser = async (req, res) => {
     });
   }
 };
-
-module.exports = { addReport, getAllAttempts, getAllAttemptsByUser };

@@ -1,5 +1,5 @@
-const router = require("express").Router();
-const {
+import express from 'express';
+import {
   addExam,
   getAllExams,
   getExamById,
@@ -8,8 +8,10 @@ const {
   addQuestionToExam,
   deleteQuestionFromExam,
   editQuestionInExam
-} = require("../controllers/examControllers");
-const authMiddleware = require("../middlewares/authMiddleware");
+} from '../controllers/examControllers.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
+
+const router = express.Router();
 
 // Add exam
 router.post('/addExam', authMiddleware, addExam);
@@ -35,4 +37,4 @@ router.delete('/deleteQuestionFromExam/:examId/:questionId', authMiddleware, del
 // Edit question in exam by exam ID and question ID
 router.put('/editQuestionInExam/:examId/:questionId', authMiddleware, editQuestionInExam);
 
-module.exports = router;
+export default router;

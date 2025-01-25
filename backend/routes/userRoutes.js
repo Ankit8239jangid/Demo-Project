@@ -1,6 +1,8 @@
-const router = require("express").Router();
-const { register, login, getUserInfo } = require("../controllers/userControllers");
-const authMiddleware = require("../middlewares/authMiddleware");
+import { Router } from "express";
+import { register, login, getUserInfo } from "../controllers/userControllers.js";
+import authMiddleware from "../middlewares/authMiddleware.js";
+
+const router = Router();
 
 // User registration
 router.post('/register', register);
@@ -11,4 +13,4 @@ router.post('/login', login);
 // Get user info (GET method, as we're fetching data)
 router.get('/get-user-info', authMiddleware, getUserInfo);
 
-module.exports = router;
+export default router;

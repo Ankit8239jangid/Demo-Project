@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Question = require("./questionModel");
+import mongoose from 'mongoose';
+import Question from './questionModel.js';
 
 const examSchema = new mongoose.Schema({
     name: {
@@ -41,4 +41,4 @@ examSchema.post('findOneAndDelete', async function (doc, next) {
 
 const examModel = mongoose.model("exams", examSchema);
 
-module.exports = examModel;
+export default examModel;

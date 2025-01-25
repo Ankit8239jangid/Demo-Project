@@ -1,6 +1,6 @@
-const Exam = require("../models/examModel");
-const User = require("../models/userModel");
-const Question = require('../models/questionModel');
+import Exam from "../models/examModel.js";
+import User from "../models/userModel.js";
+import Question from '../models/questionModel.js';
 
 const addExam = async (req, res) => {
   try {
@@ -249,7 +249,7 @@ const deleteQuestionFromExam = async (req, res) => {
   }
 };
 
-module.exports = {
+export {
   addExam,
   getAllExams,
   getExamById,
