@@ -1,4 +1,4 @@
-# Shop Manager Web Application
+# Shop Manager Web Application [Live preview]( https://shop-manager-assigment-by-ankit.vercel.app/index.html)
 
 A fully responsive, interactive three-page website for managing a shop's sales, product exchanges, and inventory.
 
