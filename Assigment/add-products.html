@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="active"><a href="add-products.html"><i class="fas fa-plus-circle"></i> Add Products</a></li>
+                    <li><a href="#"><i class="fas fa-boxes"></i> Manage Inventory</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="./img/User.png" alt="User" class="user-avatar">
+                   <div class="">
+                    <p>Admin User</p>
+                    <span>admin@shopmanager.com</span>
+                   </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Add New Product</h1>
+            </header>
+
+            <section class="upload-image-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Upload Image</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="image-upload-container">
+                            <div class="image-preview">
+                                <img id="preview-image" src="https://via.placeholder.com/200x200?text=Product+Image" alt="Product Image">
+                            </div>
+                            <div class="upload-controls">
+                                <div class="file-upload">
+                                    <input type="file" id="product-image" accept="image/*">
+                                    <label for="product-image" class="btn primary-btn">
+                                        <i class="fas fa-cloud-upload-alt"></i> Upload Product Image
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Select Product Category</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="category-grid">
+                            <div class="category-item active">
+                                <i class="fas fa-clock"></i>
+                                <span>Watches</span>
+                            </div>
+                            <div class="category-item">
+                                <i class="fas fa-link"></i>
+                                <span>Chains</span>
+                            </div>
+                            <div class="category-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobiles</span>
+                            </div>
+                            <div class="category-item">
+                                <i class="fas fa-headphones"></i>
+                                <span>Earphones</span>
+                            </div>
+                            <div class="category-item">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Clothing</span>
+                            </div>
+                            <div class="category-item">
+                                <i class="fas fa-gem"></i>
+                                <span>Accessories</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subcategory-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Select Subcategory</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="subcategory-grid">
+                            <div class="subcategory-item">
+                                <span>Analog Watches</span>
+                            </div>
+                            <div class="subcategory-item active">
+                                <span>Smart Watches</span>
+                            </div>
+                            <div class="subcategory-item">
+                                <span>Digital Watches</span>
+                            </div>
+                            <div class="subcategory-item">
+                                <span>Luxury Watches</span>
+                            </div>
+                            <div class="subcategory-item">
+                                <span>Sports Watches</span>
+                            </div>
+                            <div class="subcategory-item">
+                                <span>Kids Watches</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-details-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Product Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="product-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="brand-name">Brand Name</label>
+                                    <input type="text" id="brand-name" placeholder="Enter brand name">
+                                </div>
+                                <div class="input-group">
+                                    <label for="product-name">Product Name</label>
+                                    <input type="text" id="product-name" placeholder="Enter product name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="product-color">Color</label>
+                                    <select id="product-color">
+                                        <option value="">Select Color</option>
+                                        <option value="black">Black</option>
+                                        <option value="white">White</option>
+                                        <option value="silver">Silver</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="red">Red</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Sizes</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="size" value="small"> Small
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="size" value="large"> Large
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="size" value="xlarge"> Extra Large
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="product-quantity">Quantity</label>
+                                    <input type="number" id="product-quantity" placeholder="Enter quantity">
+                                </div>
+                                <div class="input-group">
+                                    <label for="product-price">Product Price</label>
+                                    <input type="number" id="product-price" placeholder="Enter product price">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="selling-price">Selling Price</label>
+                                    <input type="number" id="selling-price" placeholder="Enter selling price">
+                                </div>
+                                <div class="input-group">
+                                    <!-- Empty for alignment -->
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn primary-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/add-products.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="exchange.html"><i class="fas fa-exchange-alt"></i> Exchange</a></li>
+                    <li><a href="#"><i class="fas fa-boxes"></i> Inventory</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Manage Users</a></li>
+                    <li><a href="#"><i class="fas fa-qrcode"></i> QR Generator</a></li>
+                    <li class="has-submenu">
+                        <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                            <li><a href="#"><i class="fas fa-file-invoice"></i> Invoices</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Templates</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="./img/User.png" alt="User" class="user-avatar">
+                    <div class="">
+                        <p>Admin User</p>
+                        <span>admin@shopmanager.com</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Exchange</h1>
+            </header>
+
+            <section class="action-buttons-section">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="action-buttons">
+                            <div class="action-button-group">
+                                <div class="action-icon return-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M9 10h6c2.76 0 5 2.24 5 5s-2.24 5-5 5h-6"></path>
+                                        <path d="M9 15l-5-5 5-5"></path>
+                                    </svg>
+                                </div>
+                                <h3>Return Product</h3>
+                                <p class="action-description">Scan QR code to process product returns from customers</p>
+                                <button class="btn scan-btn">
+                                    <i class="fas fa-qrcode"></i> Scan QR Code
+                                </button>
+                            </div>
+                            <div class="action-button-group">
+                                <div class="action-icon delete-icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M3 6h18"></path>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <h3>Delete Product</h3>
+                                <p class="action-description">Scan QR code to remove products from inventory</p>
+                                <button class="btn scan-btn">
+                                    <i class="fas fa-qrcode"></i> Scan QR Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-table-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Product Name</th>
+                                        <th>Return/Deleted</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="product-table-body">
+                                    <tr>
+                                        <td>P001</td>
+                                        <td>Watch</td>
+                                        <td>Returned</td>
+                                        <td>$120.99</td>
+                                        <td>15</td>
+                                        <td>
+                                            <button class="action-btn delete-btn" data-id="1">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>P002</td>
+                                        <td>Chain</td>
+                                        <td>Deleted</td>
+                                        <td>$89.99</td>
+                                        <td>23</td>
+                                        <td>
+                                            <button class="action-btn delete-btn" data-id="2">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn primary-btn mt-20">Submit</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="search-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Find Products</h2>
+                    </div>
+                    <!-- <p style="padding-left: 20px;">Search product</p> -->
+                    <div class="card-body">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <input type="text" id="product-search"
+                                    placeholder="Enter product name, ID, or description">
+                                <button class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="exchange-history-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Exchange History</h2>
+                        <div class="tab-navigation">
+                            <button class="tab-btn active" data-tab="all">All</button>
+                            <button class="tab-btn" data-tab="returned">Returned</button>
+                            <button class="tab-btn" data-tab="deleted">Deleted</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table id="exchange-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Product Name</th>
+                                        <th>Returned/Deleted</th>
+                                        <th>Date</th>
+                                        <th>User</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="exchange-table-body">
+                                    <!-- Table rows will be populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <button id="prev-page" class="btn secondary-btn"><i class="fas fa-chevron-left"></i>
+                                Previous</button>
+                            <span id="page-info"> 1-5 of 10</span>
+                            <button id="next-page" class="btn secondary-btn">Next <i
+                                    class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Confirm Delete</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this item?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-delete" class="btn secondary-btn">Cancel</button>
+                <button id="confirm-delete" class="btn danger-btn">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/exchange.js"></script>
+</body>
+
+</html>

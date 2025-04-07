@@ -1,0 +1,92 @@
+[
+    {
+        "id": "P001",
+        "name": "Analog Watch",
+        "category": "Watches",
+        "subcategory": "Analog Watches",
+        "price": 120.99,
+        "stock": 15,
+        "status": "active"
+    },
+    {
+        "id": "P002",
+        "name": "Gold Chain",
+        "category": "Chains",
+        "subcategory": "Gold Chains",
+        "price": 89.99,
+        "stock": 23,
+        "status": "active"
+    },
+    {
+        "id": "P003",
+        "name": "Silver Ring",
+        "category": "Rings",
+        "subcategory": "Silver Rings",
+        "price": 45.50,
+        "stock": 30,
+        "status": "active"
+    },
+    {
+        "id": "P004",
+        "name": "Smart Watch",
+        "category": "Watches",
+        "subcategory": "Smart Watches",
+        "price": 199.99,
+        "stock": 10,
+        "status": "active"
+    },
+    {
+        "id": "P005",
+        "name": "Diamond Earrings",
+        "category": "Earrings",
+        "subcategory": "Diamond Earrings",
+        "price": 299.99,
+        "stock": 5,
+        "status": "active"
+    },
+    {
+        "id": "P006",
+        "name": "Platinum Chain",
+        "category": "Chains",
+        "subcategory": "Platinum Chains",
+        "price": 150.00,
+        "stock": 8,
+        "status": "active"
+    },
+    {
+        "id": "P007",
+        "name": "Digital Watch",
+        "category": "Watches",
+        "subcategory": "Digital Watches",
+        "price": 75.50,
+        "stock": 20,
+        "status": "active"
+    },
+    {
+        "id": "P008",
+        "name": "Gold Ring",
+        "category": "Rings",
+        "subcategory": "Gold Rings",
+        "price": 120.00,
+        "stock": 15,
+        "status": "active"
+    },
+    {
+        "id": "P009",
+        "name": "Silver Chain",
+        "category": "Chains",
+        "subcategory": "Silver Chains",
+        "price": 65.00,
+        "stock": 25,
+        "status": "active"
+    },
+    {
+        "id": "P010",
+        "name": "Diamond Ring",
+        "category": "Rings",
+        "subcategory": "Diamond Rings",
+        "price": 350.00,
+        "stock": 7,
+        "status": "active"
+    }
+]

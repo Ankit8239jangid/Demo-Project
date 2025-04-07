@@ -1,0 +1,472 @@
+/* Responsive Styles for Shop Manager */
+
+/* Tablet and Larger Mobile Devices (up to 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Adjust action buttons for tablet */
+    .action-buttons {
+        gap: 20px;
+    }
+
+    .action-button-group {
+        padding: 15px;
+    }
+
+    .action-description {
+        font-size: 0.9rem;
+    }
+
+    .action-icon {
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+
+    .scan-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .container {
+        flex-direction: column;
+        /* Stack sidebar and content */
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        /* Remove fixed positioning for stacking */
+        height: auto;
+        /* Allow natural height */
+    }
+
+    .sidebar-toggle {
+        display: block;
+        /* Show toggle button */
+        padding: 10px;
+        font-size: 1.5rem;
+        /* Larger for touch targets */
+    }
+
+    .sidebar.collapsed {
+        height: 60px;
+        /* Match image collapse height */
+        overflow: hidden;
+    }
+
+    .sidebar.collapsed .sidebar-nav,
+    .sidebar.collapsed .sidebar-footer {
+        display: none;
+        /* Hide navigation and footer when collapsed */
+    }
+
+    .main-content {
+        padding: 15px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .category-grid,
+    .subcategory-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        /* Slightly larger min-width for readability */
+        gap: 12px;
+        /* Consistent spacing */
+    }
+
+    table {
+        font-size: 0.9rem;
+        /* Slightly smaller text */
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    .btn {
+        padding: 8px 12px;
+        /* Smaller buttons for touch */
+        font-size: 0.9rem;
+        /* Ensure readability */
+    }
+
+    .image-preview {
+        width: 180px;
+        /* Slightly reduced for tablet */
+        height: 180px;
+    }
+}
+
+/* Mobile Devices (up to 640px) */
+@media screen and (max-width: 640px) {
+    /* Hide action descriptions on mobile */
+    .action-description {
+        display: none;
+    }
+
+    /* Adjust action buttons for mobile */
+    .action-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .action-button-group {
+        padding: 15px 10px;
+    }
+
+    .action-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .scan-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* Ensure product table is visible on mobile */
+    .product-table-section .table-container,
+    .product-info-section .table-container,
+    .exchange-history-section .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .product-table-section table,
+    .product-info-section table,
+    .exchange-history-section table {
+        min-width: 500px;
+        /* Ensure table has minimum width to show all columns */
+        table-layout: fixed;
+    }
+
+    .page-header h1 {
+        font-size: 1.4rem;
+        /* Smaller heading for mobile */
+    }
+
+    .card-header h2 {
+        font-size: 1.1rem;
+        /* Maintain readability */
+    }
+
+    .main-content {
+        padding: 10px;
+        /* Further reduce padding */
+    }
+
+    .category-grid,
+    .subcategory-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        /* Smaller grid items */
+        gap: 10px;
+        /* Reduced gap */
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 8px;
+        /* Smaller input padding */
+        font-size: 0.9rem;
+        /* Ensure text fits */
+    }
+
+    /* Customer Information Section Responsive */
+    .customer-info-description {
+        font-size: 1rem;
+    }
+
+    .search-input-container label {
+        font-size: 1rem;
+    }
+
+    .search-input-group {
+        gap: 10px;
+    }
+
+    .search-input-group input {
+        padding: 10px;
+    }
+
+    .search-input-group .btn {
+        padding: 10px 20px;
+    }
+
+    .image-preview {
+        width: 150px;
+        /* Further reduced */
+        height: 150px;
+    }
+
+    table {
+        font-size: 0.85rem;
+        /* Smaller text for mobile */
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        /* Reduced padding */
+    }
+
+    .payment-row {
+        flex-direction: column;
+        /* Stack payment details */
+        gap: 8px;
+        /* Adequate spacing */
+        text-align: center;
+        /* Center for better mobile layout */
+    }
+
+    .tabs {
+        overflow-x: auto;
+        /* Horizontal scroll for tabs */
+        white-space: nowrap;
+        /* Prevent wrapping */
+        padding-bottom: 5px;
+        /* Space for scroll indicator */
+    }
+
+    .tab {
+        padding: 8px 12px;
+        /* Smaller padding for touch */
+        font-size: 0.9rem;
+        /* Readable text */
+    }
+
+    .modal {
+        width: 90%;
+        /* Slightly more room */
+        max-width: 400px;
+        /* Cap for mobile */
+    }
+
+    .btn {
+        padding: 8px 12px;
+        /* Consistent button size */
+        font-size: 0.85rem;
+        /* Smaller text */
+        width: 100%;
+        /* Full width for better touch targets */
+    }
+
+    .pagination {
+        flex-direction: row;
+        /* Stack pagination */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    .pagination-info {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    /* Tab navigation responsive styles */
+    .tab-navigation {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .tab-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Search icon responsive styles */
+    .search-icon {
+        font-size: 14px;
+        right: 8px;
+    }
+}
+
+/* Small Mobile Devices (up to 360px) */
+@media screen and (max-width: 360px) {
+    /* Customer Information Section for Small Mobile */
+    .customer-info-description {
+        font-size: 0.9rem;
+    }
+
+    .search-input-container label {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .search-input-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .search-input-group input {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .search-input-group .btn {
+        width: 100%;
+        padding: 8px 15px;
+    }
+    /* Further adjust action buttons for small mobile */
+    .action-button-group {
+        padding: 10px;
+    }
+
+    .action-button-group h3 {
+        font-size: 1rem;
+    }
+
+    .action-icon {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .scan-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Further adjust tab navigation for small mobile */
+    .tab-navigation {
+        gap: 5px;
+    }
+
+    .tab-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Further adjust search icon for small mobile */
+    .search-icon {
+        font-size: 12px;
+        right: 6px;
+    }
+    .card-body {
+        padding: 10px;
+        /* Minimal padding */
+    }
+
+
+    .page-header h1 {
+        font-size: 1.2rem;
+        /* Even smaller heading */
+    }
+
+    .card-header h2 {
+        font-size: 1rem;
+        /* Smaller card headers */
+    }
+
+    .category-grid,
+    .subcategory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Force 2 columns */
+        gap: 8px;
+        /* Minimal gap */
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 6px;
+        /* Smaller input padding */
+        font-size: 0.85rem;
+        /* Smaller text */
+    }
+
+    .image-preview {
+        width: 120px;
+        /* Smallest size */
+        height: 120px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        /* Scrollable tables */
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    table {
+        min-width: 280px;
+        /* Slightly reduced min-width */
+        font-size: 0.8rem;
+        /* Smallest text */
+        width: 100%;
+        display: table;
+    }
+
+    table th,
+    table td {
+        padding: 6px;
+        /* Minimal padding */
+    }
+
+    .payment-row {
+        gap: 5px;
+        /* Tighter spacing */
+    }
+
+    .tabs .tab {
+        padding: 6px 10px;
+        /* Even smaller tabs */
+        font-size: 0.85rem;
+        /* Smaller text */
+    }
+
+    .modal {
+        width: 95%;
+        /* Maximize space */
+    }
+}
+
+/* Additional Global Responsive Tweaks */
+@media screen and (max-width: 1024px) {
+    .sidebar-nav ul li a {
+        padding: 12px 15px;
+        /* Slightly reduced padding */
+    }
+
+    .card {
+        margin-bottom: 15px;
+        /* Reduced margin */
+    }
+
+
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar-header {
+        padding: 15px;
+        /* Reduced padding */
+    }
+
+    .card-header {
+        padding: 10px 15px;
+        /* Smaller padding */
+    }
+
+    .modal-header {
+        padding: 10px 15px;
+        /* Smaller padding */
+    }
+
+    .modal-body {
+        padding: 15px;
+        /* Reduced padding */
+    }
+
+    .modal-footer {
+        padding: 10px 15px;
+        /* Smaller padding */
+    }
+}
