@@ -39,10 +39,15 @@ shop-manager/
 ```
 
 ## Setup and Usage
+- **Steps**:
+- **Prerequisites**: Visual Studio Code with the "Live Server" extension installed.
+- 1. Clone the repository
+- 2. Open `index.html` in your web browser to access the Sales page
+- 3. Navigate to other pages using the sidebar navigation
+- 4. Select "Open with Live Server".
+- 5. The app will open automatically in your default browser (e.g., `http://127.0.0.1:5500/index.html`).
 
-1. Clone the repository
-2. Open `index.html` in your web browser to access the Sales page
-3. Navigate to other pages using the sidebar navigation
+
 
 ## Mock Data
 
