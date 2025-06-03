@@ -19,6 +19,7 @@ const SideBar = () => {
             {/* Hamburger for small screens */}
             <div className="lg:hidden p-4 flex items-center justify-between bg-white shadow-md fixed w-full z-[9999]">
                 <FaBars size={24} onClick={() => setIsOpen(!isOpen)} className="cursor-pointer" />
+                    <h1>ChargePoint</h1>
             </div>
 
             {/* Sidebar */}
