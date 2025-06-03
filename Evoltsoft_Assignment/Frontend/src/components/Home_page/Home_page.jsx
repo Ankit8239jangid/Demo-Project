@@ -1,13 +1,18 @@
 import React from 'react'
-import Navbar from '../UI/Navbar'
-import Charger_Listing_Page from '../Charger_Listing_Page/Charger_Listing_Page'
+import SideBar from '../UI/SideBar'
+import { Outlet } from 'react-router-dom'
 
 function Home_page() {
   return (
-   <>
-   <Navbar/>
-   <Charger_Listing_Page/>
-   </>
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Sidebar */}
+      <SideBar />
+
+      {/* Main Content */}
+      <div className="flex-1 h-screen w-full ">
+        <Outlet />
+      </div>
+    </div>
   )
 }
 

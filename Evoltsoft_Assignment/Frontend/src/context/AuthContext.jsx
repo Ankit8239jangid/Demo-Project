@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import API from '../util/Api';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 export const AuthContext = createContext();
 
@@ -46,10 +47,12 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('User', JSON.stringify(res.data.user));
                 Navigater('/app');
+                toast.success('Signup successful!');
             }
         } catch (err) {
             const message = err.response?.data?.message || 'Signup failed. Please try again.';
             setError(message);
+            toast.error(message);
             console.error('❌ Signup error:', err);
         } finally {
             setLoading(false);
@@ -66,11 +69,13 @@ export const AuthProvider = ({ children }) => {
             if (res) {
                 localStorage.setItem('token', token);
                 localStorage.setItem('User', JSON.stringify(user));
+                toast.success('Login successful!');
                 Navigater('/app');
             }
         } catch (err) {
             const message = err.response?.data?.message || 'Login failed. Please try again.';
             setError(message);
+            toast.error(message);
             console.error('❌ Login error:', err);
         } finally {
             setLoading(false);
@@ -80,7 +85,8 @@ export const AuthProvider = ({ children }) => {
     const handleLogOut = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('User');
-        Navigater('/');
+        toast.success('Logout successful!');
+        Navigater('/login');
     };
 
     return (

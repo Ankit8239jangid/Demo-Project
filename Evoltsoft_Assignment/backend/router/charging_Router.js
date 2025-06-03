@@ -7,7 +7,7 @@ import { StationAuth } from "../middleware/StationAuth.js";
 export const charging_Station_Route = express.Router();
 
 // ✅ Create (POST) - Register a new charging station
-charging_Station_Route.post("/register", verifyToken, StationAuth, async (req, res) => {
+charging_Station_Route.post("/create", verifyToken, StationAuth, async (req, res) => {
     const { name, latitude, longitude, status, powerOutput, connectorType } = req.body;
 
     if (!name || !latitude || !longitude || !status || !powerOutput || !connectorType) {
