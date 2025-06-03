@@ -18,7 +18,7 @@ Charging Stations: [http://localhost:3000/api/v1/charging-stations](http://local
 
 ### 📥 Register a New User
 
-**POST** `/api/v1/user/register`
+**POST** `/api/v1/user/signup`
 
 **Body Example (JSON):**
 
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 
 ### 📍 Register a New Charging Station
 
-**POST** `/api/v1/charging-stations/register`
+**POST** `/api/v1/charging-stations/create`
 
 **Body Example:**
 
