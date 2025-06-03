@@ -18,7 +18,7 @@ async function userInputValidater(req, res, next) {
     try {
         const { success } = signupSchema.safeParse(req.body);
         if (!success) {
-            return res.status(400).json({ message: "Invalid input data" });
+            return res.status(400).json({ message: "Invalid input" },);
         }
 
         const existingUser = await User.findOne({ username: req.body.username });
