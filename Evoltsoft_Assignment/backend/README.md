@@ -67,7 +67,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 
 ### 📍 Register a New Charging Station
 
-**POST** `/api/v1/charging-stations/register`
+**POST** `/api/v1/charging-stations/create`
 
 **Body Example:**
 
