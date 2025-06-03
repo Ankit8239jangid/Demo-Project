@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { NavLink } from "react-router-dom";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 
 export default function SignupCard() {
-  const { signupInput, handleSignupChange, handleSignup } = useContext(AuthContext);
+  const { signupInput, handleSignupChange, handleSignup, loading } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-100 px-4">
@@ -61,19 +62,21 @@ export default function SignupCard() {
               name="password"
               value={signupInput.password}
               onChange={handleSignupChange}
-              placeholder="Password"
+              placeholder="Password must be 6 characters"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <button
-              type="submit"
-              className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
-            >
-              Create Account
-            </button>
+            {loading ? <AiOutlineLoading3Quarters className="font-bold text-2xl text-green-600 w-full animate-spin" /> :
+              <button
+                type="submit"
+                className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+              >
+                Create Account
+              </button>
+            }
           </form>
           <p className="mt-6 text-sm text-center text-gray-500">
             Alrady have an account?{' '}
-            <NavLink to={"/login"}  className="text-green-600 hover:underline">
+            <NavLink to={"/login"} className="text-green-600 hover:underline">
               Login
             </NavLink>
           </p>

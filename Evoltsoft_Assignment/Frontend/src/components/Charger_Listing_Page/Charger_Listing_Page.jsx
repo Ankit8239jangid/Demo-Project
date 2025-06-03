@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { FiSearch, FiChevronDown } from 'react-icons/fi';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 export default function Charger_Listing_Page() {
   const {
@@ -43,7 +44,7 @@ export default function Charger_Listing_Page() {
   // Apply filters whenever filter conditions change
   useEffect(() => {
     applyFilters();
- 
+
   }, [stations, selectedStatus, selectedConnector, searchTerm]);
 
   const fetchStations = async () => {
@@ -109,7 +110,7 @@ export default function Charger_Listing_Page() {
   return (
     <div className="h-full p-2">
       <h1 className="text-3xl font-bold mb-6 text-center">Charging Stations</h1>
-      
+
       {/* Filters Container */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4  mb-6">
         {/* Search Input */}
@@ -214,11 +215,10 @@ export default function Charger_Listing_Page() {
                   <td className="px-4 py-2 whitespace-nowrap">{index + 1}</td>
                   <td className="px-4 py-2 whitespace-nowrap">{station.name}</td>
                   <td className="px-4 py-2 whitespace-nowrap">
-                    <span className={`px-2 py-1 rounded-full text-xs ${
-                      station.status === 'Active' 
-                        ? 'bg-green-100 text-green-800' 
+                    <span className={`px-2 py-1 rounded-full text-xs ${station.status === 'Active'
+                        ? 'bg-green-100 text-green-800'
                         : 'bg-red-100 text-red-800'
-                    }`}>
+                      }`}>
                       {station.status}
                     </span>
                   </td>
@@ -276,12 +276,14 @@ export default function Charger_Listing_Page() {
                 >
                   Cancel
                 </button>
-                <button
-                  type="submit"
-                  className="bg-green-500 text-white px-4 py-2 rounded"
-                >
-                  Save Changes
-                </button>
+                {loading ? <AiOutlineLoading3Quarters className="font-bold text-2xl text-green-600 w-full animate-spin" /> :
+                  <button
+                    type="submit"
+                    className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+                  >
+                    Save Changes
+                  </button>
+                }
               </div>
             </form>
           </div>

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { NavLink } from 'react-router-dom';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const LoginCard = () => {
   const {
@@ -8,13 +9,13 @@ const LoginCard = () => {
     handleLoginChange,
     handleLogin,
     loading,
-    error,
+    
   } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-100 px-4 py-10">
       <div className="flex w-full max-w-4xl bg-white rounded-2xl overflow-hidden shadow-lg">
-        
+
         {/* Left: Image */}
         <div className="w-1/2 hidden md:block">
           <img
@@ -56,22 +57,19 @@ const LoginCard = () => {
               />
             </div>
 
-            {error && (
-              <p className="text-red-500 text-sm text-center">{error}</p>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-300"
-            >
-              {loading ? 'Logging in...' : 'Login'}
-            </button>
+            {loading ? <AiOutlineLoading3Quarters className="font-bold text-2xl text-green-600 w-full animate-spin" /> :
+              <button
+                type="submit"
+                className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+              >
+                Login
+              </button>
+            }
           </form>
 
           <p className="mt-6 text-sm text-center text-gray-500">
             Don’t have an account?{' '}
-            <NavLink to={"/"}  className="text-green-600 hover:underline">
+            <NavLink to={"/"} className="text-green-600 hover:underline">
               Sign up
             </NavLink>
           </p>
